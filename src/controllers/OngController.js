@@ -12,8 +12,7 @@ module.exports = {
         return res.json(ongs);    
         } catch (error) {
             console.log('ERRO'+error)
-        }
-        
+        }        
       },
     
     async create(req, res) {
@@ -21,11 +20,9 @@ module.exports = {
         const { name, email, whatsapp, city, uf } = req.body;
         // gerando o ID randomico
         const id = crypto.randomBytes(4).toString('HEX');
-
         await conection('ongs').insert({
             id, name, email, whatsapp, city, uf
         });
-
         return res.json({ id });
     }
 
