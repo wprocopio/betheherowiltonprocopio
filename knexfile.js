@@ -3,7 +3,7 @@
 module.exports = {
 
   development: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       // filename : './src/database/db.sqlite' client:'sqlite3'
       database: 'hero',
@@ -17,7 +17,7 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'pg',
     connection: process.env.DATABASE_URL ,
     pool: {
       min: 2,
@@ -30,7 +30,7 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: process.env.DATABASE_URL ,
     pool: {
       min: 2,
