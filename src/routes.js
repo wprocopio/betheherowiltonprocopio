@@ -7,9 +7,8 @@ const PorfilleController = require('./controllers/porfilleController');
 const SessionController = require('./controllers/SessionController');
 
 
-routes.get('/',(req, res) => {
-  return res.json({msg:'Oi'})
-});
+
+routes.get('/',OngsController.index);
 
 routes.get('/ongs',OngsController.index);
 routes.post('/ongs',OngsController.create);
