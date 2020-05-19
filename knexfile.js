@@ -4,12 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      // filename : './src/database/db.sqlite' client:'sqlite3'
-      database: 'hero',
-      user:     'postgres',
-      password: '1t4rg3t'
-    },
+    connection: process.env.DATABASE_URL ,
     migrations:{
       directory:'./src/database/migrations'
     },
