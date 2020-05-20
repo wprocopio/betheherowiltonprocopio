@@ -4,16 +4,14 @@ const routes = require('./routes');
 const cors = require('cors');
 
 const app = express();
-const bodyParser = require('body-parser');
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }))
-
-// parse application/json
-app.use(bodyParser.json())
+var corsOptions = {
+  origin: 'https://reverent-mirzakhani-8a01cb.netlify.app',
+  optionsSuccessStatus: 200
+}
 
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(routes);
 
