@@ -5,13 +5,7 @@ const cors = require('cors');
 
 const app = express();
 
-var corsOptions = {
-  origin: 'https://reverent-mirzakhani-8a01cb.netlify.app',
-  optionsSuccessStatus: 200
-}
-
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 app.use(routes);
