@@ -33,7 +33,7 @@ module.exports = {
 
         console.log(title, description, valor, ong_id);
 
-        const reesult = await conection('incidents').insert({
+        await conection('incidents').insert({
             title, description, valor, ong_id,
         });       
         
