@@ -23,6 +23,9 @@ module.exports = {
 
     },    
     async create(req, res) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        
         // desetruturacao do java script para madnar apenas os campos corretos  
         const { title, description, valor } = req.body;
         // gerando o ID randomico
