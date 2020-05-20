@@ -31,7 +31,7 @@ module.exports = {
         // gerando o ID randomico
         const ong_id = req.headers.authorization;
 
-        //console.log(title, description, valor, ong_id);
+        console.log(title, description, valor, ong_id);
 
         const reesult = await conection('incidents').insert({
             title, description, valor, ong_id,
