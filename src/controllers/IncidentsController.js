@@ -31,11 +31,11 @@ module.exports = {
 
         alert(title, description, valor, ong_id);
 
-        await conection('incidents').insert({
+       const[id] = await conection('incidents').insert({
             title, description, valor, ong_id,
         });       
         
-        return res.json( 'Rergistro inserido' );
+        return response.json({ id });
     },
     async delete(req,res){
         // pegando o id q vem la do parametro 
