@@ -22,20 +22,20 @@ module.exports = {
         return res.json(incidents);
 
     },    
+
     async create(req, res) {
         
         // desetruturacao do java script para madnar apenas os campos corretos  
         const { title, description, valor } = req.body;
         // gerando o ID randomico
-        const ong_id = req.headers.authorization;
+        const ong_id = req.headers.authorization;                                   
 
-        alert(title, description, valor, ong_id);
+        console.log(title, description, valor, ong_id);
 
-       const [id] = await connection('incidents').insert({
+       const [id] = await connection('incidents').insert({                                     
             title, description, valor, ong_id,
         });       
-              
-
+    
         return res.json({ id });
     },
     async delete(req,res){
