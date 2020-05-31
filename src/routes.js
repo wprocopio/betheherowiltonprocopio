@@ -6,10 +6,13 @@ const IncidentsController = require('./controllers/IncidentsController');
 const PorfilleController = require('./controllers/porfilleController');
 const SessionController = require('./controllers/SessionController');
 
+const app = express();
+
 const cors = require('cors');
 
-
 app.use(cors());
+
+
 
 routes.get('/',OngsController.index);
 routes.get('/ongs',OngsController.index);
