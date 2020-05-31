@@ -6,7 +6,9 @@ const routes = require('./routes');
 
 const app = express();
 
-
+app.use(cors({   // exemplo de permissão de origem
+       origin: 'http://serene-hugle-efa406.netlify.app/tp://meuapp.com'
+  }));
 
 app.use(express.json());
 app.use(routes);

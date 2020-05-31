@@ -27,7 +27,7 @@ module.exports = {
         
         // desetruturacao do java script para madnar apenas os campos corretos  
         const { title, description, valor } = req.body;
-        // gerando o ID randomico
+        
         const ong_id = req.headers.authorization;                                   
 
         console.log(title, description, valor, ong_id);
