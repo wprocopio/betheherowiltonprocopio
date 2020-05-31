@@ -7,6 +7,7 @@ const PorfilleController = require('./controllers/porfilleController');
 const SessionController = require('./controllers/SessionController');
 
 
+app.use(cors());
 
 routes.get('/',OngsController.index);
 routes.get('/ongs',OngsController.index);
