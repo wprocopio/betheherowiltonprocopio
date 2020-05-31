@@ -31,10 +31,11 @@ module.exports = {
 
         alert(title, description, valor, ong_id);
 
-       const[id] = await conection('incidents').insert({
+       const [id] = await connection('incidents').insert({
             title, description, valor, ong_id,
         });       
-        
+              
+
         return res.json({ id });
     },
     async delete(req,res){
