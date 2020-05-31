@@ -6,6 +6,8 @@ const IncidentsController = require('./controllers/IncidentsController');
 const PorfilleController = require('./controllers/porfilleController');
 const SessionController = require('./controllers/SessionController');
 
+const cors = require('cors');
+
 
 app.use(cors());
 
