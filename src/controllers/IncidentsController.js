@@ -31,8 +31,8 @@ module.exports = {
         const ong_id = req.headers.authorization;                                   
 
         console.log(title, description, valor, ong_id);
-
-       const [id] = await connection('incidents').insert({                                     
+                    
+       const [id] = await conection('incidents').insert({                                     
             title, description, valor, ong_id,
         });       
     
