@@ -35,7 +35,7 @@ module.exports = {
             title, description, valor, ong_id,
         });       
         
-        return response.json({ id });
+        return res.json({ id });
     },
     async delete(req,res){
         // pegando o id q vem la do parametro 

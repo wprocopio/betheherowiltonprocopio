@@ -12,4 +12,5 @@ app.use(routes);
 
 const PORT = process.env.PORT;
 
-app.listen(PORT)
+
+app.listen(PORT);
