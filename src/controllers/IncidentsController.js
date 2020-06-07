@@ -33,10 +33,11 @@ module.exports = {
         console.log(title, description, valor, ong_id);
                     
        const [id] = await conection('incidents').insert({                                     
-            title, description, valor, ong_id
+            title, description, valor, ong_id,
         });       
-    
-        return res.json();
+        
+        return res.json( { id });
+
     },
     async delete(req,res){
         // pegando o id q vem la do parametro 
